@@ -18,6 +18,10 @@ Trial: Area | Circularity | Convexity | Inertia | Number of masks found
 3       100      0.4             0.2        0.01     2  // same blobs as 1
 4       100      0.6             0.2        0.01     0
 
+5       50       0.1             0.2        0.01      5  // includes blobs from 1 
+6       25       0.1             0.2        0.01      7  // includes blobs from 6 
+7       12       0.1             0.2        0.01      8  // includes blobs from 7
+
 
 # These were all done by hand, which is pretty slow way to check 
 
