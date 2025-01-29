@@ -1,0 +1,29 @@
+# Lisa Samoylov 01/28/25 DALI Data Challenge Application 
+# LOG/Comment file for make_ellipses.py 
+
+Ellipse-Identification Taken From Geeks2Geeks: 
+https://www.geeksforgeeks.org/find-circles-and-ellipses-in-an-image-using-opencv-python/
+
+They provide the code and some basic explanations for the parameters they explore 
+
+Parameters: (do units matter?)
+Area = Area of circle (to avoid erroneous classifications) 
+Circularity = Triangle-onal to poolygonal to elliptical to circular 
+Convexity = Heart-shaped to circular-shaped (whether or not shape bends in on itself)
+Inertia = How squeezed the shape is (Circle = 1, ellipse in [0,1], line = 0)
+
+Trial: Area | Circularity | Convexity | Inertia | Number of masks found 
+1       100      0.1             0.2        0.01     2
+2       100      0.2             0.2        0.01     2 // same blobs as 1
+3       100      0.4             0.2        0.01     2  // same blobs as 1
+4       100      0.6             0.2        0.01     0
+
+
+# These were all done by hand, which is pretty slow way to check 
+
+# WANT: 
+# Let's get the computer to 
+#   - estimate the best parameters (does that help?)
+#   - search for blobs over a range of parameters 
+ 
+ # grid_search to go over best parameter range
