@@ -6,7 +6,7 @@ This process is an attempt to automate the barnacle counting (II)
 ASSUME GIVEN: mask with barnacle contours (so, raw image --> contours --> mask) 
 GOAL: Count the number of contours (blobs) 
 
-IDEA: 
+IDEA: Stacking Filters 
 - make_ellipses.py can successfully identify some blobs in the mask contours 
 0) tinker with the parameters in make_ellipses to identify the tiniest blobs (and count them) 
 1) tinker with the parameters again in make_ellipses to identify the larger blobs (and count them) 
@@ -18,9 +18,10 @@ VISUALIZATIONS:
 - !!! some may identify the same blob (there is blob count overlap) !!! 
 
 FEASIBILITY: 
-- unlike the other attempts, at least make_ellipses does it's one job, even if not very well 
+- unlike the other attempts, make_ellipses.py does identify some blobs (although it identifies a certain subset) 
 - also - there was a bug where altering the img file name somehow affected the number of blobs identified 
-- so it's very possible that this approach might not work, but it's worth exploring more 
+- so it's very possible that this approach might not work, but it's worth exploring more
+- make_ellipses.py wasn't very well tested, so that's one thing to look into (comparing number of blobs against parameters)
 
 IMPORTANT FILES 
 ========================
